@@ -5,3 +5,7 @@ Note App : An app that can receive user input (a note) and provide some basic ou
 ## To work on the App:
 1. git clone (repo link)
 2. npm install
+
+### test
+
+The Application has some unit tests for the modules, using jest.
