@@ -8,4 +8,4 @@ Note App : An app that can receive user input (a note) and provide some basic ou
 
 ### test
 
-The Application has some unit tests for the modules, using jest.
+The Application works with ES6 classes, and has some unit tests for the modules, using jest.
