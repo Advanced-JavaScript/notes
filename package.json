@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/ashjan-401-advanced-javascript/notes#readme",
   "dependencies": {
-    "minimist": "^1.2.5"
+    "minimist": "^1.2.5",
+    "mongoose": "^5.10.3",
+    "supergoose": "^0.2.6"
   },
   "devDependencies": {
     "jest": "^26.4.2"
