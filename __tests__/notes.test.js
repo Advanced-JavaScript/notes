@@ -1,8 +1,7 @@
 'use strict';
 
 const Note = require('../lib/notes');
-var supergoose = require('supergoose');
-const NoteDoc = require('../lib/model/notes-schema');
+const testNote = require('../lib/model/notes-collection');
 
 const myMock = jest.fn();
 jest.spyOn(global.console, 'log');
@@ -41,47 +40,26 @@ describe('Note Module', () => {
             listing(); note.execute();
             expect(myMock.mock.calls.length).toBe(3);
         });
-        it('add() will log out notes when given', ()=> {
+        it('add() will log out notes when given', () => {
             note.add();
             setTimeout(() => {
-              expect(console.log).toHaveBeenCalled();
+                expect(console.log).toHaveBeenCalled();
             });
         });
-        it('list() will log out notes when given', ()=> {
+        it('list() will log out notes when given', () => {
             note.list();
             setTimeout(() => {
-              expect(console.log).toHaveBeenCalled();
+                expect(console.log).toHaveBeenCalled();
             });
         });
-        it('delete() will log out notes when given', ()=> {
+        it('delete() will log out notes when given', () => {
             note.delete();
             setTimeout(() => {
-              expect(console.log).toHaveBeenCalled();
+                expect(console.log).toHaveBeenCalled();
             });
         });
+        
     });
 
 });
 
-// let notes = {
-//     first: { text: 'red', category: 'color', id:1 },
-//     second: { text: 'apple', category: 'fruit' },
-//     third: { text: 'dog', category: 'animal' }
-// };
-// describe('Categories', () => {
-
-//     let categories;
-//     // let wat = supergoose.create({ text: 'red', category: 'color' });
-//     beforeEach(() => {
-//       categories = new NoteDoc(notes.first);
-//     });
-  
-//     it('post(): can post a new category', () => {
-//         let obj = new NoteDoc(notes.first);
-//         // obj.save();
-//       const record = obj.save();
-//         Object.keys(obj).forEach(key => {
-//             expect(record[key]).toEqual(obj[key]);
-//         });
-//     });
-// });
