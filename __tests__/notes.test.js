@@ -1,8 +1,8 @@
 'use strict';
 
 const Note = require('../lib/notes');
-// var supergoose = require('supergoose');
-// const NoteDoc = require('../lib/model/notes-schema');
+var supergoose = require('supergoose');
+const NoteDoc = require('../lib/model/notes-schema');
 
 const myMock = jest.fn();
 jest.spyOn(global.console, 'log');
@@ -64,26 +64,24 @@ describe('Note Module', () => {
 });
 
 // let notes = {
-//     first: { text: 'red', category: 'color' },
+//     first: { text: 'red', category: 'color', id:1 },
 //     second: { text: 'apple', category: 'fruit' },
 //     third: { text: 'dog', category: 'animal' }
 // };
 // describe('Categories', () => {
 
 //     let categories;
-//     let wat = supergoose.create({ text: 'red', category: 'color' });
-//     console.log('ll',wat )
+//     // let wat = supergoose.create({ text: 'red', category: 'color' });
 //     beforeEach(() => {
-//       categories = new NoteDoc();
+//       categories = new NoteDoc(notes.first);
 //     });
   
 //     it('post(): can post a new category', () => {
-//         let obj = notes.first;
-//       return supergoose.create(obj)
-//         .then(record => {
-//           Object.keys(obj).forEach(key => {
+//         let obj = new NoteDoc(notes.first);
+//         // obj.save();
+//       const record = obj.save();
+//         Object.keys(obj).forEach(key => {
 //             expect(record[key]).toEqual(obj[key]);
-//           });
 //         });
 //     });
 // });
